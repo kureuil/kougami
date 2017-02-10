@@ -1,0 +1,10 @@
+{
+  "linters": {
+    "clang": {
+      "extra_flags": "-Wall -Wextra -Wpedantic -std=c++14",
+      "include_dirs": [
+        "${project_dir}/inc/"
+      ]
+    }
+  }
+}
