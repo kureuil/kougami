@@ -5,7 +5,7 @@
 
 namespace clang {
 const std::unordered_map<
-    CXCursorKind,
+    int,
     std::function<Result(Visitor *, Cursor const &, Cursor const &)>>
     bindings{
         {CXCursor_UnexposedDecl, &Visitor::visit_unexposed_decl},
