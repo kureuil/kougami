@@ -4,7 +4,7 @@ int global_sigcount = 0;
 
 int lol(struct Trash a, struct Trash *c, int b, int d, int e)
 {
-  return 0;
+  if (b == 0) return 0;
 }
 
 int	main(void)
