@@ -35,9 +35,8 @@ $ kougami src/main.c -I ./inc/
 * `goto` is forbidden
 * `do`...`while` is forbidden
 * a function cannot have more than 25 lines between its brackets
-* a typedef on s\_my\_struct must be called t\_my\_struct
 * multiline macros are forbidden
-* a control structure is always followed by a line feed
+* a control structure is always followed by a line feed (only compound statements are checked)
 
 ### Bonus rules
 
@@ -60,8 +59,6 @@ $ kougami src/main.c -I ./inc/
 * affecting a variable while declaring it is forbidden, except when the variable is declared `static` or `global`
 * the pointer operator must always be written next to the variable (or function) name, never the type
 * function parameters will use the ISO/ANSI syntax
-* commas are only allowed when separating parameters
-* commas are followed by a space (or a line feed)
 * no space between a function name and its opening parenthesis
 * a keyword is always followed by a space, except for sizeof
 * no space after a unary operator
@@ -78,7 +75,9 @@ Due to the current program architecture and foundations (libclang vs. LibTooling
 or due to the very nature of the rule, the following rules cannot be checked.
 
 * 80 characters by line (this one is quite controversial)
-* characters following a `#if` or a `#ifdef ` must be indented (???)
+* characters following a `#if` or a `#ifdef ` must be indented (???) (libclang does not parse whitespaces)
+* commas are only allowed when separating parameters (libclang does not consider the comma a "real" operator)
+* commas are followed by a space (or a line feed) (libclang does not consider the comma a "real" operator)
 
 ## Requirements
 
@@ -97,7 +96,7 @@ $ cd kougami
 $ mkdir build && cd $_
 $ cmake ..
 $ make
-$ # Optional
+# Optional
 $ sudo make install
 ```
 
