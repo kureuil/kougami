@@ -37,6 +37,8 @@ typedef ssize_t (*t_Printer)(const char *fmt, va_list ap);
 
 extern int global_sigcount;
 
+extern int g_lol = 5;
+
 int lol(struct Trash a, struct Trash *c, int b, int d, int e);
 
 int mdr(t_elf elf, t_trash *hello, codes c);

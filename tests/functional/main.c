@@ -1,5 +1,7 @@
 #include "header.h"
 
+extern int g_lol;
+
 int global_sigcount = 0;
 
 int lol(struct Trash a, struct Trash *c, int b, int d, int e)
