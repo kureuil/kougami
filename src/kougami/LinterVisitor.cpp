@@ -23,7 +23,7 @@ void LinterVisitor::check_cursor_is_in_source(Cursor const &cursor) {
   std::string location{cursor.location().file().name()};
   if (location.substr(location.size() - 2, 2) != ".c") {
     this->_errors.emplace_back(
-        Error{cursor.location(), "should be defined in a header"});
+        Error{cursor.location(), "should be defined in a source file"});
   }
 }
 
