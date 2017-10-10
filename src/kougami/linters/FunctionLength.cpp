@@ -9,9 +9,9 @@ Result FunctionLength::visit_compound_stmt(Cursor const &cursor,
   if (parent.kind() != CXCursor_FunctionDecl) {
     return Result::Recurse;
   }
-  if (cursor.extent().end().line() - cursor.extent().start().line() - 1 > 25) {
+  if (cursor.extent().end().line() - cursor.extent().start().line() - 1 > 20) {
     this->_errors.emplace_back(
-        Error{cursor.location(), "function must not be longer than 25 lines"});
+        Error{cursor.location(), "function must not be longer than 20 lines"});
   }
   return Result::Recurse;
 }
