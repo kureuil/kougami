@@ -35,6 +35,7 @@
 *.sublime-project
 *.sublime-workspace
 /.idea
+/cmake-build-debug
 
 # Temporary files
 *~
