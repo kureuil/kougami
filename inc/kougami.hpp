@@ -98,6 +98,11 @@ class TypedefLocation : public LinterVisitor {
   Result visit_typedef_decl(Cursor const &, Cursor const &) override;
 };
 
+class TypedefName : public LinterVisitor {
+  public:
+    Result visit_typedef_decl(Cursor const &, Cursor const &) override;
+};
+
 class NoStructCopy : public LinterVisitor {
  public:
   Result visit_parm_decl(Cursor const &, Cursor const &) override;
