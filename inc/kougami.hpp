@@ -78,43 +78,6 @@ class IdentifierCase : public LinterVisitor {
   Result visit_typedef_decl(Cursor const &, Cursor const &) override;
 };
 
-class StructureName : public LinterVisitor {
- public:
-  Result visit_struct_decl(Cursor const &, Cursor const &) override;
-};
-
-class UnionName : public LinterVisitor {
- public:
-  Result visit_union_decl(Cursor const &, Cursor const &) override;
-};
-
-class EnumerationName : public LinterVisitor {
- public:
-  Result visit_enum_decl(Cursor const &, Cursor const &) override;
-};
-
-class SwitchStatement : public LinterVisitor {
- public:
-  Result visit_switch_stmt(Cursor const &, Cursor const &) override;
-};
-
-class ForStatement : public LinterVisitor {
- public:
-  Result visit_for_stmt(Cursor const &, Cursor const &) override;
-};
-
-class DoStatement : public LinterVisitor {
- public:
-  Result visit_do_stmt(Cursor const &, Cursor const &) override;
-};
-
-class GotoStatement : public LinterVisitor {
- public:
-  Result visit_label_stmt(Cursor const &, Cursor const &) override;
-  Result visit_goto_stmt(Cursor const &, Cursor const &) override;
-  Result visit_indirect_goto_stmt(Cursor const &, Cursor const &) override;
-};
-
 class MacroCase : public LinterVisitor {
  public:
   Result visit_macro_definition(Cursor const &, Cursor const &) override;
@@ -130,11 +93,6 @@ class NoMultilineMacro : public LinterVisitor {
   Result visit_macro_definition(Cursor const &, Cursor const &) override;
 };
 
-class TypedefName : public LinterVisitor {
- public:
-  Result visit_typedef_decl(Cursor const &, Cursor const &) override;
-};
-
 class TypedefLocation : public LinterVisitor {
  public:
   Result visit_typedef_decl(Cursor const &, Cursor const &) override;
@@ -146,11 +104,6 @@ class NoStructCopy : public LinterVisitor {
 };
 
 class GlobalVarLocation : public LinterVisitor {
- public:
-  Result visit_var_decl(Cursor const &, Cursor const &) override;
-};
-
-class GlobalVarName : public LinterVisitor {
  public:
   Result visit_var_decl(Cursor const &, Cursor const &) override;
 };
@@ -169,11 +122,6 @@ class FunctionCount : public LinterVisitor {
 
  public:
   Result visit_function_decl(Cursor const &, Cursor const &) override;
-};
-
-class RelativeInclusionDirective : public LinterVisitor {
- public:
-  Result visit_inclusion_directive(Cursor const &, Cursor const &) override;
 };
 
 class FunctionLength : public LinterVisitor {
