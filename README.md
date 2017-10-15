@@ -24,24 +24,10 @@ $ kougami src/main.c -I ./inc/
 * function names should only contain lower cased letters, numbers and underscores
 * a function cannot take more than 4 parameters
 * macro names should only contain upper cased letters, numbers and underscores
-* structure names should be prefixed by `s_`
-* typedef names should be prefixed by `t_`
-* a typedef on a structure should match the structure name (`s_*` -> `t_$1`)
-* union names should be prefixed by `u_`
-* enum names should be prefixed by `e_`
+* typedef names should be suffixed by `_t`
 * a function cannot take a structure by copy, always pass a pointer to the structure
-* `switch` is forbidden
-* `for` is forbidden
-* `goto` is forbidden
-* `do`...`while` is forbidden
-* a function cannot have more than 25 lines between its brackets
+* a function cannot have more than 20 lines between its brackets
 * multiline macros are forbidden
-* a control structure is always followed by a line feed (only compound statements are checked)
-
-### Bonus rules
-
-* includes directives shouldn't contain relative paths
-* label statements are forbidden (because gotos are forbidden)
 
 ## Unchecked rules
 
@@ -49,14 +35,10 @@ $ kougami src/main.c -I ./inc/
 * header inclusion must be justified (no unused included header in a header)
 * prototypes are not allowed in source file
 * no comments in function bodies
-* comments begin by a `/*` line, are finished by a `*/` line, and in between lines begin with `**`
 * general code indentation (Emacs/Allman style)
-* variables names are aligned with the enclosing function's name
 * file names should only contain lower cased letters, numbers and underscores
 * directory names should only contain lower cased letters, numbers and underscores
 * ANSI style declaration of variable (declaration block, empty line, then instructions block)
-* declaration must be aligned using tabs, function prototypes must also be aligned
-* affecting a variable while declaring it is forbidden, except when the variable is declared `static` or `global`
 * the pointer operator must always be written next to the variable (or function) name, never the type
 * function parameters will use the ISO/ANSI syntax
 * no space between a function name and its opening parenthesis
