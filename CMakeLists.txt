@@ -22,13 +22,6 @@ set(SRCS
   src/kougami/Error.cpp
   src/kougami/LinterVisitor.cpp
   src/kougami/linters/IdentifierCase.cpp
-  src/kougami/linters/StructureName.cpp
-  src/kougami/linters/UnionName.cpp
-  src/kougami/linters/EnumerationName.cpp
-  src/kougami/linters/SwitchStatement.cpp
-  src/kougami/linters/ForStatement.cpp
-  src/kougami/linters/DoStatement.cpp
-  src/kougami/linters/GotoStatement.cpp
   src/kougami/linters/MacroCase.cpp
   src/kougami/linters/NoMultilineMacro.cpp
   src/kougami/linters/MacroLocation.cpp
@@ -36,10 +29,8 @@ set(SRCS
   src/kougami/linters/TypedefLocation.cpp
   src/kougami/linters/NoStructCopy.cpp
   src/kougami/linters/GlobalVarLocation.cpp
-  src/kougami/linters/GlobalVarName.cpp
   src/kougami/linters/ArgumentCount.cpp
   src/kougami/linters/FunctionCount.cpp
-  src/kougami/linters/RelativeInclusionDirective.cpp
   src/kougami/linters/FunctionLength.cpp
   src/kougami/linters/BreakAfterControl.cpp
   src/kougami/linters/NoSpaceAfterUnary.cpp
